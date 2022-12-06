@@ -7,5 +7,5 @@ import sk.umb.luiza.domain.model.User;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
-     User requestToUser(UserDto dto);
+    User requestToUser(UserDto dto);
 }

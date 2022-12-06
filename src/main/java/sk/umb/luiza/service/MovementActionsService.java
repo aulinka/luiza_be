@@ -8,7 +8,6 @@ import sk.umb.luiza.domain.model.MovementAction;
 import sk.umb.luiza.domain.repository.MovementActionsRepository;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -22,19 +21,19 @@ public class MovementActionsService {
         this.movementActionsRepository = movementActionsRepository;
     }
 
-    public void moveToDestination(String destination, String garbageType){
+    public void moveToDestination(String destination, String garbageType) {
         movementActionsRepository.save(new MovementAction(destination, GarbageType.valueOf(garbageType), false, false));
     }
 
-    public List<MovementAction> getAllMovementActions(){
-         List<MovementAction> actions = movementActionsRepository.findAllByProcessed(false);
-         actions.forEach(a -> a.setProcessed(true));
-         return actions;
+    public List<MovementAction> getAllMovementActions() {
+        List<MovementAction> actions = movementActionsRepository.findAllByProcessed(false);
+        actions.forEach(a -> a.setProcessed(true));
+        return actions;
     }
 
-    public void machineArrived(UUID movementActionId){
+    public void machineArrived(UUID movementActionId) {
         MovementAction movement = movementActionsRepository.findById(movementActionId).orElse(null);
-        if(movement == null){
+        if (movement == null) {
             throw new RuntimeException("There is no movement with this id!");
         }
         movement.setArrived(true);
