@@ -17,3 +17,10 @@ Branch *dev* sluzi na developovanie aplikacie, nikdy nepushujte do master branch
 Z branch dev si vytvorte novu a nazvyte ju podla funkcionality ktoru riesite
 
 `git checkout -b nazov_vetvy` 
+
+## praca s aplikaciou
+1. **spustenie databazy**
+- v priecinku s projektom spustite prikaz ```docker-compose up -d``` (ak pracujete v IntelliJ IDEA v zalozke terminal),
+nasledne sa skuste napojit na DB, bud rovno v IDE prostredi (postup v nasledujucej odrazke) alebo pomocou aplikacii ako je [DBeaver](https://dbeaver.io/download/) 
+- vo vertikalnych zalozkach v pravo otovrte zalozku Database -> New -> Data Source, 
+vyberte PostgreSQL (RDBMS), vyplnte inputy *user, password, database* podla informacii v docker-compose.yml subore
