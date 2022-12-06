@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class LuizaApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(LuizaApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(LuizaApplication.class, args);
+    }
 }

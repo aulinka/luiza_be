@@ -1,12 +1,12 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/luiza
-    username: admin
-    password: admin
+    url: #
+    username: #
+    password: #
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: #
     show-sql: true
     properties:
       hibernate:
