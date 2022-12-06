@@ -22,6 +22,8 @@ Z branch dev si vytvorte novu a nazvyte ju podla funkcionality ktoru riesite
 
 `git checkout -b nazov_vetvy`
 
+Aplikacia bezi defaultne na porte **8080**
+
 ## praca s aplikaciou
 
 1. **spustenie databazy**
