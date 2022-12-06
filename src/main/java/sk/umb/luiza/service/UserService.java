@@ -7,6 +7,8 @@ import sk.umb.luiza.domain.model.User;
 import sk.umb.luiza.domain.repository.MovementActionsRepository;
 import sk.umb.luiza.domain.repository.UserRepository;
 
+import java.util.UUID;
+
 @Service
 @Slf4j
 public class UserService {
@@ -27,5 +29,10 @@ public class UserService {
 
     public User userLogin(User user) {
         return userRepository.findByStudentIdAndPassword(user.getStudentId(), user.getPassword());
+    }
+
+    public Integer getUserRewardPoints(String studentId){
+        User user = userRepository.findByStudentId(studentId);
+        return user.getPoints();
     }
 }
